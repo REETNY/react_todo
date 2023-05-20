@@ -1,0 +1,65 @@
+.mainHead{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    margin-bottom: 40px;
+  }
+  
+  .title{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .welcomeMsg{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    column-gap: 15px;
+  }
+  
+  .message, .welcome{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .userName::placeholder{
+    font-size: 16px;
+    color: palevioletred;
+  }
+  
+  .userName{
+    width: fit-content;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 0px 0px 1px 1.5px rgba(44, 44, 44, 0.1);
+    border-radius: 10px;
+  }
+
+
+  @media only screen and (max-width: 500px){
+    .mainHead{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title{
+      padding-left: 10px;
+    }
+
+    .welcomeMsg{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+    }
+  }

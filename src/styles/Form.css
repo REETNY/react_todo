@@ -1,0 +1,160 @@
+form{
+    width: 500px;
+    border-radius: 25px 9px 25px 9px;
+    background: gainsboro;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  
+  #todoEntry{
+    width: 80%;
+    height: 55px;
+    padding: 0px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px 2.5px rgb(0, 0, 0, .55);
+    border-radius: 22.5px;
+  }
+  
+  .category{
+    width: 85%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  label[for="cate1"]{
+    flex-basis: 45%;
+    width: 100%;
+    background: gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    transition: transform 0.99s linear;
+    cursor: pointer;
+  }
+  
+  label[for="cate1"]:active{
+    transform: translateX(-5px);
+  }
+  
+  label[for="cate2"]:active{
+    transform: translateX(5px);
+  }
+  
+  input[type="radio"]{
+    display: none;
+  }
+  
+  label[for="cate2"]{
+    flex-basis: 45%;
+    width: 100%;
+    background: gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    transition: transform 0.99s linear;
+    cursor: pointer;
+  }
+  
+  .bubble{
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bubble.personal{
+    border-color: pink;
+    border-style: solid;
+  }
+  
+  .bubble.business{
+    border-color: rgb(78, 78, 230);
+    border-style: solid;
+  }
+  
+  .bubble.business::after{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(78, 78, 230);
+    width: 0px;
+    height: 0px;
+    transition: height .3s linear, width .3s linear;
+  }
+  
+  .bubble.personal::after{
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: pink;
+    width: 0px;
+    height: 0px;
+    transition: height .3s linear, width .3s linear;
+  }
+  
+  #cate1:checked ~ .bubble.personal::after{
+    height: 12px;
+    width: 12px;
+  }
+  
+  #cate2:checked ~ .bubble.business::after{
+    height: 12px;
+    width: 12px;
+  }
+  
+  .submitTodo{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px 3px rgb(0, 0, 0, .6);
+    transition: transform .05s linear;
+    cursor: pointer;
+  }
+
+
+@media only screen and (max-width: 500px){
+  form{
+    display: block;
+    min-width: 100vw;
+    max-width: 100vw;
+    padding: 50px 5px;
+  }
+
+  #todoEntry{
+    width: 95%;
+  }
+}
